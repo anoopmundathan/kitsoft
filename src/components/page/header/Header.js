@@ -20,17 +20,4 @@ const Header = () => {
 	);
 }
 
-
 export default Header;
-
-// <header class="main-header">
-// 				<div class="container clearfix">
-// 					<h1 class="name"><a href="#">Best City Guide</a></h1>
-// 					<ul class="main-nav">
-// 						<li><a href="#">ice cream</a></li>
-// 						<li><a href="#">donuts</a></li>
-// 						<li><a href="#">tea</a></li>
-// 						<li><a href="#">coffee</a></li>
-// 					</ul>
-// 				</div>
-// </header>

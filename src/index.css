@@ -20,7 +20,13 @@ h1 {
 
 a {
 	text-decoration: none;
+	/*border: 1px solid blue;*/
 }
+
+li {
+	/*border: 2px solid yellow;*/
+}
+
 
 .container {
 	width: 100%;
@@ -51,7 +57,9 @@ header {
 /*** Navigation ***/
 
 .navbar-container {
-	/*border: 1px solid green;*/
+	/*border: 10px solid green;*/
+	width: 100%;
+
 }
 
 .nav-container {
@@ -96,8 +104,17 @@ header {
 footer {
 	text-align: center;
 }
-/*** Content ***/
 
+/*** Content ***/
+.content-container {
+}
+
+.col {
+	margin: 2em;
+	padding: 2em;
+	border: 1px solid green;
+	background: green;
+}
 
 /*** Footer ***/
 footer {
@@ -105,4 +122,26 @@ footer {
 	background: #EAFBFF;
 	margin-top: 30px;
 	text-align: center;
+}
+
+/*** Media Query ***/
+
+@media (min-width: 830px) {
+
+	.header-container,
+	.logo-title-container,
+	.navbar-container,
+	.main-nav {
+		display: flex;
+	}
+
+	.logo-title-container {
+		width: 30%;
+		justify-content: flex-start;
+	}
+
+	.navbar-container {
+		width: 70%;
+		justify-content: flex-end;
+	}
 }

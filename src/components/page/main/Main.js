@@ -13,21 +13,21 @@ const Banner = () => {
 const Content = () => {
 	return(
 		<div className='content-container'>
-			<div>
+			<div className='col'>
 				<h1>First content</h1>
 				<p>Details</p>
 			</div>
 			
-			<div>
+			<div className='col'>
 				<h1>Second content</h1>
 				<p>Details</p>
 			</div>
-			<div>
+			<div className='col'>
 				<h1>Third content</h1>
 				<p>Details</p>
 			</div>
 			
-			<div>
+			<div className='col'>
 				<h1>Fourth content</h1>
 				<p>Details</p>
 			</div>
