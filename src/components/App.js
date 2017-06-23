@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 
+import Header from './page/header/Header';
+import Main from './page/main/Main';
+import Footer from './page/footer/Footer';
+
 class App extends Component {
 	render() {
 		return(
 			<div>
-				Welcome to KitSoft
+				<Header/>
+				<Main/>
+				<Footer/>
 			</div>
 		);
 	}
