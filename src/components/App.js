@@ -7,11 +7,12 @@ import Footer from './page/footer/Footer';
 class App extends Component {
 	render() {
 		return(
-			<div>
+			<div className='app-container'>
 				<Header/>
 				<Main/>
 				<Footer/>
 			</div>
+			
 		);
 	}
 }
