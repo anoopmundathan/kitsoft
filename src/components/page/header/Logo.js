@@ -2,8 +2,7 @@ import React from 'react';
 
 const Logo = () => {
 	return(
-		<div>
-			Logo Goes Here
+		<div className='logo'>
 		</div>
 	);
 }

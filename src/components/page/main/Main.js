@@ -3,7 +3,6 @@ import React from 'react';
 const Banner = () => {
 	return(
 		<div className='banner-container'>
-			<span>Hero Image goes here</span>
 			<h1>Welcome</h1>
 			<span>Hello there</span>
 		</div>
@@ -37,7 +36,7 @@ const Content = () => {
 
 const Main = () => {
 	return(
-		<main className='main-conatiner'>
+		<main className='main-container'>
 			<Banner/>
 			<Content/>
 		</main>
