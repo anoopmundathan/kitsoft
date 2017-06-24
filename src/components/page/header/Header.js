@@ -1,34 +1,59 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Logo from './Logo';
 import Title from './Title';
 import NavBar from './NavBar';
 import Hamburger from './Hamburger';
 
-const Header = (props) => {
+const kitsoftObj = {
+	title: 'Kitsoft',
+	navItems: ['Who We Are', 
+			   'What We Do', 
+			   'How We Work', 
+			   'Contact']
+}
 
-	const navClass = ['navbar'];
-	const headerClass = ['header'];
+class Header extends Component {
 	
-	if (props.hamburgerClicked) {
-		navClass.push('navbar-hamburger');
-		headerClass.push('header-hamburger');
+	constructor(props) {
+		super(props);
+		this.state = {
+			hamburgerClicked: false
+		}
 	}
 
-	return(
-		<header className={headerClass.join(' ')}>
-			<div className='header-container'>
-				<div className='logo-title-ham-container'>
-					<Logo/>
-					<Title title={props.title}/>
-					<Hamburger onHamburgerClick={props.onHamburgerClick}/>
+	onHamburgerClick() {
+		this.setState({
+			hamburgerClicked: !this.state.hamburgerClicked
+		});
+	}
+
+	render() {
+
+		const navClass = ['navbar'];
+		const headerClass = ['header'];
+	
+		if (this.state.hamburgerClicked) {
+			navClass.push('navbar-hamburger');
+			headerClass.push('header-hamburger');
+		}
+
+		return(
+			<header className={headerClass.join(' ')}>
+				<div className='header-container'>
+					<div className='logo-title-ham-container'>
+						<Logo/>
+						<Title title={kitsoftObj.title}/>
+						<Hamburger 
+							onHamburgerClick={this.onHamburgerClick.bind(this)}/>
+					</div>
+					<div className={navClass.join(' ')}>
+						<NavBar items={kitsoftObj.navItems}/>
+					</div>
 				</div>
-				<div className={navClass.join(' ')}>
-					<NavBar />
-				</div>
-			</div>
-		</header>
-	);
+			</header>
+		);
+	}
 }
 
 export default Header;

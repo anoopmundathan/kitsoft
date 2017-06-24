@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const Hamburger = (props) => {
 	return(
 		<div className='hamburger-container' onClick={props.onHamburgerClick}>
