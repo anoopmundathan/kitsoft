@@ -5,17 +5,29 @@ import Title from './Title';
 import NavBar from './NavBar';
 import Hamburger from './Hamburger';
 
-const Header = () => {
+const Header = (props) => {
+
+	let headerClass;
+	let navClass;
+
+	if (props.hamburgerClicked) {
+		navClass = null;
+		headerClass = 'header-hamburger';
+	} else {
+		navClass = 'navbar-container-no-display';
+		headerClass = null;
+	}
+	
 	return(
-		<header>
+		<header className={headerClass}>
 			<div className='header-container'>
 				<div className='logo-title-ham-container'>
 					<Logo/>
-					<Title/>
-					<Hamburger/>
+					<Title title={props.title}/>
+					<Hamburger onHamburgerClick={props.onHamburgerClick}/>
 				</div>
-				<div className='navbar-container'>
-					<NavBar/>
+				<div className={navClass}>
+					<NavBar />
 				</div>
 			</div>
 		</header>

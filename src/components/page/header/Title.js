@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Title = () => {
+const Title = (props) => {
 	return(
 		<div className='kitsoft'>
-			<h1>Kitsoft</h1>
+			<h1>{props.title}</h1>
 		</div>
 	);
 }

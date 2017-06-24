@@ -19,6 +19,10 @@ header {
 	background: linear-gradient(90deg, #F6B352 0%, #F68657 100%);
 }
 
+.header-hamburger {
+	height: 100vh;
+}
+
 .header-container,
 .logo,
 .kitsoft, 
@@ -67,6 +71,7 @@ header {
 	margin-top: .3em;
 	width: 50px;
 	height: 50px;
+	cursor: pointer;
 }
 
 .hamburger-top,
@@ -78,9 +83,8 @@ header {
 	background: #FFBC42;
 }
 
-
 /*** Navigation ***/
-.navbar-container {
+.navbar-container-no-display {
 	display: none;
 }
 
@@ -88,6 +92,8 @@ header {
 	margin: 0;
 	padding: 10px;
 	list-style: none;
+	border-bottom: solid 1px #e0e3da;
+	transition: all .3s ease;
 }
 
 .main-nav a {
@@ -96,6 +102,11 @@ header {
 	font-size: 1.2em;
 	text-decoration: none;
 	color: #ffeee4;
+}
+
+.main-nav a:hover {
+	color: #EC7357;
+	transition: all .5s ease;
 }
 
 /*** Banner ***/
@@ -161,6 +172,10 @@ footer {
 		width: 50%;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.main-nav li {
+		border-bottom: none;
 	}
 }
 
