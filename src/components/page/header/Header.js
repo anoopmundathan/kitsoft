@@ -7,26 +7,23 @@ import Hamburger from './Hamburger';
 
 const Header = (props) => {
 
-	let headerClass;
-	let navClass;
-
-	if (props.hamburgerClicked) {
-		navClass = null;
-		headerClass = 'header-hamburger';
-	} else {
-		navClass = 'navbar-container-no-display';
-		headerClass = null;
-	}
+	const navClass = ['navbar'];
+	const headerClass = ['header'];
 	
+	if (props.hamburgerClicked) {
+		navClass.push('navbar-hamburger');
+		headerClass.push('header-hamburger');
+	}
+
 	return(
-		<header className={headerClass}>
+		<header className={headerClass.join(' ')}>
 			<div className='header-container'>
 				<div className='logo-title-ham-container'>
 					<Logo/>
 					<Title title={props.title}/>
 					<Hamburger onHamburgerClick={props.onHamburgerClick}/>
 				</div>
-				<div className={navClass}>
+				<div className={navClass.join(' ')}>
 					<NavBar />
 				</div>
 			</div>

@@ -4,23 +4,25 @@
 
 html,
 body {
-	font-family: 'Helvetica Neue', 'Varela Round', sans-serif;
+	/*font-family: 'Helvetica Neue', 'Varela Round', sans-serif;*/
+	font: 16px 'Open Sans', sans-serif;
 	line-height: 1.6;
 	color: #3a3a3a;
 }
 
 /*** Heading ***/
-header {
+.header {
 	width: 100%;
-	min-height: 80px;
+	height: 80px;
 	position: fixed;
 	top: 0;
 	z-index: 1000;
 	background: linear-gradient(90deg, #F6B352 0%, #F68657 100%);
+	transition: 0.5s;
 }
 
 .header-hamburger {
-	height: 100vh;
+	height: 100%;
 }
 
 .header-container,
@@ -84,8 +86,27 @@ header {
 }
 
 /*** Navigation ***/
-.navbar-container-no-display {
-	display: none;
+.navbar {
+	visibility: hidden;
+	opacity: 0;
+	transition: .5s;
+}
+
+.navbar-hamburger {
+	visibility: visible;
+	opacity: 1;
+}
+
+.navbar-container {
+	transform: translateY(100%);
+}
+
+.nav-container {
+	
+}
+
+.main-nav {
+	
 }
 
 .main-nav li {

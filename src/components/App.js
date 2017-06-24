@@ -18,9 +18,6 @@ class App extends Component {
 	}
 
 	onHamburgerClick() {
-		
-		console.log('clicked');
-
 		this.setState({
 			hamburgerClicked: !this.state.hamburgerClicked
 		});
