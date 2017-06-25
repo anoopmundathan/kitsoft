@@ -10,7 +10,8 @@ const kitsoftObj = {
 	navItems: ['Who We Are', 
 			   'What We Do', 
 			   'How We Work', 
-			   'Contact']
+			   'Contact'],
+	logo: ''
 }
 
 class Header extends Component {
@@ -32,10 +33,17 @@ class Header extends Component {
 
 		const navClass = ['navbar'];
 		const headerClass = ['header'];
+
+		const hamBurgerTopClass = ['hamburger-top'];
+		const hamBurgerMiddleClass = ['hamburger-middle'];
+		const hamBurgerBottomClass = ['hamburger-bottom'];
 	
 		if (this.state.hamburgerClicked) {
 			navClass.push('navbar-hamburger');
 			headerClass.push('header-hamburger');
+			hamBurgerTopClass.push('hamburger-top-active');
+			hamBurgerMiddleClass.push('hamburger-middle-active');
+			hamBurgerBottomClass.push('hamburger-bottom-active');
 		}
 
 		return(
@@ -45,7 +53,11 @@ class Header extends Component {
 						<Logo/>
 						<Title title={kitsoftObj.title}/>
 						<Hamburger 
-							onHamburgerClick={this.onHamburgerClick.bind(this)}/>
+							onHamburgerClick={this.onHamburgerClick.bind(this)}
+							top={hamBurgerTopClass}
+							middle={hamBurgerMiddleClass}
+							bottom={hamBurgerBottomClass}
+							/>
 					</div>
 					<div className={navClass.join(' ')}>
 						<NavBar items={kitsoftObj.navItems}/>

@@ -74,15 +74,44 @@ body {
 	width: 50px;
 	height: 50px;
 	cursor: pointer;
+	position: relative;
+}
+
+.hamburger-top {
+	top: 10px;
+}
+
+.hamburger-middle {
+	top: 20px;
+}
+
+.hamburger-bottom {
+	top: 30px;
 }
 
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-	margin: .4em .2em;
+	left: 5px;
 	width: 40px;
 	height: 5px;
+	position: absolute;
 	background: #FFBC42;
+	transition: .5s;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+}
+
+.hamburger-top-active {
+	top: 20px;
+	transform: rotate(135deg);
+}
+.hamburger-middle-active {
+	visibility: hidden;
+	opacity: 0;
+}
+.hamburger-bottom-active {
+	top: 20px;
+	transform: rotate(45deg);
 }
 
 /*** Navigation ***/
