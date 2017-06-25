@@ -1,5 +1,28 @@
 import React from 'react';
 
+const services = [
+	{
+		name: 'Business and Technology Consulting',
+		class: 'box-header-1'
+	},
+	{
+		name: 'Websites and Mobile Apps',
+		class: 'box-header-2'
+	},
+	{
+		name: 'Project Management',
+		class: 'box-header-3'
+	},
+	{
+		name: 'Training',
+		class: 'box-header-4'
+	},
+	{
+		name: 'Networking',
+		class: 'box-header-5'
+	}
+];
+
 const Banner = () => {
 	return(
 		<div className='banner-container'>
@@ -10,26 +33,21 @@ const Banner = () => {
 }
 
 const Content = () => {
+	const cardDiv = services.map(item => {
+		return(
+			<div className='box-container'>
+				<div className={item.class}>
+				</div>
+				<div className='box-detail'>
+					<h2>{item.name} </h2>
+				</div>
+			</div>
+		);
+	})
+
 	return(
 		<div className='content-container'>
-			<div className='col'>
-				<h1>First content</h1>
-				<p>Details</p>
-			</div>
-			
-			<div className='col'>
-				<h1>Second content</h1>
-				<p>Details</p>
-			</div>
-			<div className='col'>
-				<h1>Third content</h1>
-				<p>Details</p>
-			</div>
-			
-			<div className='col'>
-				<h1>Fourth content</h1>
-				<p>Details</p>
-			</div>
+			{cardDiv}
 		</div>
 	);
 }

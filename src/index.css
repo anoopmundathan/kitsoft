@@ -18,7 +18,9 @@ body {
 	top: 0;
 	z-index: 1000;
 	background: linear-gradient(90deg, #F6B352 0%, #F68657 100%);
+	background: #54546c;
 	transition: 0.5s;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
 
 .header-hamburger {
@@ -156,7 +158,6 @@ body {
 
 .banner-container {
 	padding: 1em;	
-	background: #f5f5f5;
 }
 
 .banner-container h1 {
@@ -164,25 +165,68 @@ body {
 }
 
 .banner-container,
-.content-container,
 .main-nav,
 .logo-title-ham-container,
+.content-container,
 footer {
 	text-align: center;
 }
 
 /*** Content ***/
+.content-container {
+	width: 80%;
+	margin-top: 3em;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-.col {
-	margin: 2em;
-	padding: 2em;
+.box-container {
+	margin-top: 3em;
+	padding-top: 0;
+	padding-bottom: 2em;
+	padding-left: 0;
+	padding-right: 0;
+	box-shadow: 0 2px 5px rgba(0,0,0,.2);
+	
+}
 
+.box-header-1 {
+	height: 150px;
+	background: linear-gradient(90deg, #9DC8C8 0%, #58C9B9 100%);
+}
+
+.box-header-2 {
+	height: 150px;
+	background: linear-gradient(90deg, #D4DFE6 0%, #8EC0E4 100%);
+}
+
+.box-header-3 {
+	height: 150px;
+	background: linear-gradient(90deg, #AAABD3 0%, #CBA6C3 100%);
+}
+
+.box-header-4 {
+	height: 150px;
+	background: linear-gradient(90deg, #379392 0%, #4FB0C6 100%);
+}
+
+.box-header-5 {
+	height: 150px;
+	background: linear-gradient(90deg, #D09E88 0%, #FADAD8 100%);
+}
+
+
+.box-detail h2{
+	padding-top: 2em;
+	padding-bottom: 2em;
 }
 
 /*** Footer ***/
 footer {
 	padding: 10em 0;
 	background: #f0f5f9;
+	background: #54546c;
 	margin-top: 30px;
 	text-align: center;
 }
@@ -212,10 +256,8 @@ footer {
 		justify-content: flex-end;
 	}
 
-	.col {
+	.content-container {
 		width: 50%;
-		margin-left: auto;
-		margin-right: auto;
 	}
 
 	.main-nav li {
